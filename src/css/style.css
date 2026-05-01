@@ -1,4 +1,23 @@
 header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   background-color: #81bfd2;
-  height: 100px;
+  height: 60px;
+}
+
+.logo {
+  padding-top: 10px;
+  height: 36px;
+}
+
+.icons {
+  height: 24px;
+  padding: 10px;
+}
+
+.icons-header {
+  display: flex;
+  flex-direction: row;
 }
