@@ -21,3 +21,32 @@ header {
   display: flex;
   flex-direction: row;
 }
+
+@media (min-width: 600px) {
+  header {
+    height: 112px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .icons-nav {
+    grid-area: 1 / 3 / 2 / 4;
+    justify-self: end;
+    padding-right: 52px;
+  }
+
+  .logo-header {
+    grid-area: 1 / 2 / 2 / 3;
+    justify-self: center;
+  }
+
+  .logo {
+    height: 75px;
+    align-self: center;
+  }
+
+  .icons {
+    height: 36px;
+    padding: 24px;
+  }
+}
