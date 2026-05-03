@@ -44,7 +44,29 @@ main {
 footer {
   background-color: #81bfd2;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 50px 0;
+}
+
+footer nav {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+footer nav,
+footer > div {
+  min-width: 250px;
+}
+
+.logo-footer {
+  height: 64px;
+}
+
+footer h3 {
+  margin: 0;
 }
 
 @media (min-width: 600px) {
