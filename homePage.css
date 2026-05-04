@@ -1,0 +1,36 @@
+.carousel > article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.carousel-image {
+  height: 184px;
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+.carousel h3 {
+  grid-area: 2 / 1 / 3 / 2;
+  font-size: 10px;
+}
+
+.carousel p {
+  grid-area: 2 / 2 / 3 / 3;
+  font-size: 10px;
+  justify-self: start;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+}
+
+.arrowLeft-img {
+  height: 50px;
+  rotate: -90deg;
+}
+
+.arrowRight-img {
+  height: 50px;
+  rotate: 90deg;
+}
