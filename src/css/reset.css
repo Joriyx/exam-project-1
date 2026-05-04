@@ -15,3 +15,8 @@ a {
   text-decoration: none;
   color: black;
 }
+
+button {
+  border: 0;
+  background: none;
+}
