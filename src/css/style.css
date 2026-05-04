@@ -23,7 +23,7 @@ header {
 }
 
 main {
-  height: calc(100dvh - 60px);
+  min-height: calc(100dvh - 60px);
 }
 
 .logo {
@@ -97,7 +97,7 @@ footer h3 {
   }
 
   main {
-    height: calc(100dvh - 112px);
+    min-height: calc(100dvh - 112px);
   }
 
   .icons-nav {
