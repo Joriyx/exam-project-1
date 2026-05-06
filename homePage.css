@@ -54,3 +54,40 @@
   height: 50px;
   rotate: 90deg;
 }
+
+.section-container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  margin: 0 10px;
+  justify-items: center;
+}
+
+.list-img {
+  height: 90px;
+}
+
+.section-container div {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow: auto;
+  width: 100%;
+}
+
+.list-button-left {
+  height: 25px;
+  rotate: -90deg;
+}
+
+.list-button-right {
+  height: 25px;
+  rotate: 90deg;
+}
+
+article h3 {
+  font-size: 10px;
+}
+
+article p {
+  font-size: 8px;
+}
