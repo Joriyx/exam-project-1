@@ -91,3 +91,9 @@ article h3 {
 article p {
   font-size: 8px;
 }
+
+@media (min-width: 600px) {
+  .list-img {
+    height: 150px;
+  }
+}
