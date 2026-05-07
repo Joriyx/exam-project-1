@@ -28,13 +28,13 @@
 }
 
 .carousel h3 {
-  font-size: 10px;
+  font-size: 0.6em;
   justify-self: end;
   align-self: center;
 }
 
 .carousel p {
-  font-size: 10px;
+  font-size: 0.5em;
   justify-self: start;
   align-self: center;
 }
@@ -86,16 +86,50 @@
   rotate: 90deg;
 }
 
+h1,
+h2 {
+  margin-left: 45px;
+}
+
 article h3 {
-  font-size: 10px;
+  font-size: 0.6em;
 }
 
 article p {
-  font-size: 8px;
+  font-size: 0.5em;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .list-img {
-    height: 125px;
+    height: 200px;
+  }
+
+  .carousel h3 {
+    font-size: 1em;
+  }
+
+  .carousel p {
+    font-size: 0.8em;
+  }
+
+  .carousel-image {
+    max-height: 368px;
+  }
+
+  article h3 {
+    font-size: 1em;
+  }
+
+  article p {
+    font-size: 0.8em;
+  }
+
+  .section-container {
+    margin: 0 64px;
+  }
+
+  h1,
+  h2 {
+    margin-left: 100px;
   }
 }
