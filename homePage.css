@@ -89,14 +89,17 @@
 h1,
 h2 {
   margin-left: 45px;
+  color: var(--text-color);
 }
 
 article h3 {
   font-size: 0.6em;
+  color: var(--text-color);
 }
 
 article p {
   font-size: 0.5em;
+  color: var(--text-color);
 }
 
 @media (min-width: 800px) {
