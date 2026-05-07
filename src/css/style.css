@@ -57,11 +57,6 @@ footer nav {
   gap: 50px;
 }
 
-footer nav,
-footer > div {
-  min-width: 250px;
-}
-
 .logo-footer {
   height: 64px;
 }
@@ -70,21 +65,24 @@ footer h3 {
   margin: 0;
 }
 
-@media (min-width: 620px) {
-  footer {
-    flex-direction: row-reverse;
-    align-items: flex-end;
-  }
+footer nav,
+footer div {
+  width: 150px;
 }
 
 @media (min-width: 800px) {
   header {
+    height: 90px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  .logo {
+    height: 48px;
+  }
+
   main {
-    min-height: calc(100dvh - 112px);
+    min-height: calc(100dvh - 90px);
   }
 
   .icons-nav {
@@ -106,5 +104,10 @@ footer h3 {
 
   footer nav {
     flex-direction: row;
+  }
+
+  footer nav,
+  footer div {
+    width: unset;
   }
 }
