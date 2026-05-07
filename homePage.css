@@ -5,6 +5,10 @@
   flex-grow: 1;
 }
 
+section {
+  margin-bottom: 6em;
+}
+
 .carousel-image {
   max-height: 184px;
   width: 100%;
@@ -42,7 +46,7 @@
 .carousel {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  margin: 0 10px;
+  margin-inline: 10px;
   justify-items: center;
 }
 
@@ -59,7 +63,7 @@
 .section-container {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  margin: 0 10px;
+  margin-inline: 10px;
   justify-items: center;
 }
 
@@ -127,8 +131,9 @@ article p {
     font-size: 0.8em;
   }
 
-  .section-container {
-    margin: 0 64px;
+  .section-container,
+  .carousel {
+    margin-inline: 64px;
   }
 
   h1,
