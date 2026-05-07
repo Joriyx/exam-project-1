@@ -6,7 +6,8 @@
 }
 
 .carousel-image {
-  height: 184px;
+  max-height: 184px;
+  width: 100%;
 }
 
 .carousel div {
@@ -46,12 +47,12 @@
 }
 
 .arrowLeft-img {
-  height: 50px;
+  height: 36px;
   rotate: -90deg;
 }
 
 .arrowRight-img {
-  height: 50px;
+  height: 36px;
   rotate: 90deg;
 }
 
@@ -69,6 +70,7 @@
 .section-container div {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 20px;
   overflow: auto;
   width: 100%;
