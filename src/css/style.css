@@ -71,20 +71,6 @@ footer h3 {
 }
 
 @media (min-width: 620px) {
-  header {
-    height: 112px;
-  }
-
-  .logo {
-    height: 75px;
-    align-self: center;
-  }
-
-  .icons {
-    height: 36px;
-    padding: 24px;
-  }
-
   footer {
     flex-direction: row-reverse;
     align-items: flex-end;
