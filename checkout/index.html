@@ -33,7 +33,45 @@
       </ul>
     </nav>
   </header>
-  <main></main>
+  <main>
+    <form method="post">
+      <section>
+        <h2>Delivery</h2>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+        <label for="Fname">First Name:</label>
+        <input type="text" id="Fname" name="Fname" />
+        <label for="Lname">Last Name:</label>
+        <input type="text" id="Lname" name="Fname" />
+        <label for="adress">adress:</label>
+        <input type="text" id="adress" name="adress" />
+        <label for="postal-code">Postal code:</label>
+        <input type="text" id="postal-code" name="postal-code" />
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" />
+      </section>
+      <section>
+        <h2>Payment</h2>
+        <fieldset>
+          <label for="card">Card</label>
+          <input type="radio" id="card" name="payment" value="card" checked />
+          <label for="vipps">Vipps</label>
+          <input type="radio" id="vipps" name="payment" value="vipps" />
+          <label for="klarna">Klarna</label>
+          <input type="radio" id="klarna" name="payment" value="klarna" />
+        </fieldset>
+        <label for="card-name">Name on card:</label>
+        <input type="text" id="card-name" name="card-name" />
+        <label for="card-number">Card number:</label>
+        <input type="number" id="card-number" name="card-number" />
+        <label for="exp-date">Exp date:</label>
+        <input type="number" id="exp-date" name="exp-date" />
+        <label for="cvv">CVV:</label>
+        <input type="number" id="cvv" name="cvv" />
+        <button type="submit">PAY NOW</button>
+      </section>
+    </form>
+  </main>
   <footer>
     <nav>
       <ul>
