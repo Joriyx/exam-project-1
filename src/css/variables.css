@@ -1,6 +1,9 @@
 :root {
   --background-color: #17171a;
-  --header-color: #c5ced9;
+  --header-color: #5d737e;
   --footer-color: #95a1ad;
+  --card-background-color: #131316;
+  --card-stroke-color: #0a0a0b;
   --text-color: #cdced4;
+  --buttons-color: #431b1b;
 }
