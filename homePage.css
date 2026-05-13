@@ -74,10 +74,6 @@ section {
   justify-items: center;
 }
 
-.list-img {
-  height: 90px;
-}
-
 .section-container div {
   display: flex;
   flex-direction: row;
@@ -113,6 +109,28 @@ article h3 {
 article p {
   font-size: 0.5em;
   color: var(--text-color);
+}
+
+.list-img {
+  height: 90px;
+  min-width: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.card {
+  border: 2px solid var(--card-border-color);
+  background-color: var(--card-background-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card hgroup {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  white-space: nowrap;
 }
 
 @media (min-width: 800px) {
