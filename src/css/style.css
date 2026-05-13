@@ -1,3 +1,14 @@
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--headings-font);
+}
+
+p {
+  font-family: var(--text-font);
+}
+
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -6,7 +17,12 @@ body {
   background-size: cover;
   background-position: bottom right;
   background-repeat: no-repeat;
+  font-family: var(--text-font);
   margin: 0;
+}
+
+button {
+  font-family: var(--text-font);
 }
 
 header {

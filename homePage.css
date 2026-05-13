@@ -104,6 +104,8 @@ h2 {
 article h3 {
   font-size: 0.6em;
   color: var(--text-color);
+  font-family: var(--text-font);
+  font-weight: 800;
 }
 
 article p {
