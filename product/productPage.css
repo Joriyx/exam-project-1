@@ -49,3 +49,33 @@ button {
   width: 64px;
   margin-top: 2px;
 }
+
+@media (min-width: 800px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    justify-content: center;
+    padding: 84px;
+  }
+
+  .product-image img {
+    width: 100%;
+    min-height: 438px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  button {
+    margin-bottom: 20px;
+  }
+
+  .Product-info {
+    margin: 0;
+    width: 100%;
+  }
+
+  section {
+    align-self: center;
+  }
+}
