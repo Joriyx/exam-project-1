@@ -25,6 +25,7 @@ section {
 
 .carousel-button {
   background-color: var(--buttons-color);
+  font-weight: bold;
   border-radius: 10px;
   width: 100px;
   color: var(--text-color);
