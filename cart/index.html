@@ -6,6 +6,7 @@
     <meta name="description" content="" />
     <title>Chit Shop|Cart</title>
     <link rel="stylesheet" href="/src/css/index.css" />
+    <link rel="stylesheet" href="cartPage.css" />
   </head>
   <header>
     <nav class="logo-header">
@@ -37,22 +38,24 @@
     <h1>Your Cart</h1>
     <section>
       <article>
-        <span><img src="/assets/stock-photo/12-toy-car.jpg" alt="" /></span>
-        <h2>product name</h2>
-        <p>price</p>
-        <span>
-          <img src="/assets/icons/Heart-icon.svg" alt="" />
+        <span class="product-thumbnail"
+          ><img src="/assets/stock-photo/12-toy-car.jpg" alt=""
+        /></span>
+        <h2 class="product-name">product name</h2>
+        <p class="price">price</p>
+        <span class="favorite">
+          <img src="/assets/icons/Heart-white-icon.svg" alt="" />
         </span>
-        <span>
+        <span class="remove-button">
           <img src="/assets/icons/Trashcan-icon.svg" alt="" />
         </span>
-        <div>
+        <div class="amount">
           <span>
             <img src="/assets/icons/Minus-sign-icon.svg" alt="" />
           </span>
-          <p>amount in cart</p>
+          <p>1</p>
           <span>
-            <img src="/assets/icons/Minus-sign-icon.svg" alt="" />
+            <img src="/assets/icons/Plus-sign-icon.svg" alt="" />
           </span>
         </div>
       </article>
@@ -64,6 +67,10 @@
       </div>
       <div>
         <p>shipping</p>
+        <p>price</p>
+      </div>
+      <div>
+        <p>total price</p>
         <p>price</p>
       </div>
       <button>TO CHECKOUT</button>
