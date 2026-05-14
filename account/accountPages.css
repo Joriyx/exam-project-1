@@ -13,9 +13,7 @@ button {
   color: var(--text-color);
   font-weight: bold;
   border-radius: 10px;
-  width: 200px;
   padding: 10px;
-  align-self: center;
   margin-top: 25px;
 }
 
@@ -46,4 +44,15 @@ main a {
 .undertext {
   font-size: 0.8em;
   align-self: center;
+}
+
+.undertext a {
+  text-decoration: underline;
+  margin-inline: 10px;
+}
+
+@media (min-width: 800px) {
+  form {
+    width: 350px;
+  }
 }
