@@ -21,7 +21,10 @@ button {
   background: none;
 }
 
-h3 {
+h3,
+h1,
+h2,
+h4 {
   margin: 0;
 }
 
