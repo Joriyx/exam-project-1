@@ -29,11 +29,7 @@ label {
   align-self: flex-start;
 }
 
-button {
-  background-color: var(--buttons-color);
-  color: var(--text-color);
-  font-weight: bold;
-  border-radius: 10px;
+.button {
   padding: 10px;
   margin-top: 25px;
   width: 60%;
@@ -106,7 +102,7 @@ input[type="radio"] {
     margin: none;
   }
 
-  button {
+  .button {
     width: 100%;
   }
 
