@@ -35,4 +35,8 @@ main p {
   .button {
     width: 300px;
   }
+
+  main {
+    padding: 15dvh;
+  }
 }
