@@ -2,11 +2,7 @@ main {
   color: var(--text-color);
 }
 
-button {
-  background-color: var(--buttons-color);
-  color: var(--text-color);
-  font-weight: bold;
-  border-radius: 10px;
+.button {
   width: 150px;
   padding: 10px;
 }
@@ -66,7 +62,7 @@ button {
     border-radius: 10px;
   }
 
-  button {
+  .button {
     margin-bottom: 20px;
   }
 
