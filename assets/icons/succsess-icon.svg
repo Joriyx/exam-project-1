@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 279 279" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
-    <g transform="matrix(1,0,0,1,-1098.39,-648.217)">
-        <g transform="matrix(0.875728,0,0,0.875728,153.815,105.663)">
-            <circle cx="1237.73" cy="778.658" r="159.112" style="fill:rgb(54,255,68);"/>
-        </g>
-        <g transform="matrix(0.921452,0,0,0.921452,639.85,28.7407)">
-            <path d="M725.423,780.028L633.042,872.408L577.045,816.41" style="fill:none;stroke:white;stroke-width:37.32px;"/>
-        </g>
-    </g>
+<svg width="145" height="145" viewBox="0 0 145 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_25_1360)">
+<path d="M72.4169 144.832C112.411 144.832 144.833 112.41 144.833 72.4161C144.833 32.4217 112.411 -0.000137329 72.4169 -0.000137329C32.4226 -0.000137329 0.000732422 32.4217 0.000732422 72.4161C0.000732422 112.41 32.4226 144.832 72.4169 144.832Z" fill="#69995D"/>
+<path d="M109.089 51.5982L64.8487 95.8382L38.0322 69.0212" stroke="#CDCED4" stroke-width="17.8722" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_25_1360">
+<rect width="145" height="145" fill="white"/>
+</clipPath>
+</defs>
 </svg>
