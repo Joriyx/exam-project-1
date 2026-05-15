@@ -90,3 +90,27 @@ input[type="radio"] {
   justify-content: space-between;
   padding: 0;
 }
+
+@media (min-width: 800px) {
+  main {
+    padding: 60px;
+  }
+
+  form {
+    flex-direction: row;
+    gap: 100px;
+    justify-content: center;
+  }
+
+  .delivery-section {
+    width: 300px;
+  }
+
+  .payment-section {
+    width: 300px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
