@@ -98,13 +98,8 @@ article h2 {
   text-align: center;
 }
 
-.checkout-button {
-  background-color: var(--buttons-color);
-  font-weight: bold;
-  border-radius: 10px;
+.button {
   width: 125px;
-  text-align: center;
-  color: var(--text-color);
   padding: 10px;
   align-self: center;
 }
@@ -140,7 +135,7 @@ h1 {
     padding: 50px;
   }
 
-  .checkout-button {
+  .button {
     width: 100%;
   }
 
