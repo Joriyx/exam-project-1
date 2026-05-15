@@ -102,17 +102,19 @@ input[type="radio"] {
     flex-direction: row;
     gap: 100px;
     justify-content: center;
-  }
-
-  .delivery-section {
-    width: 300px;
-  }
-
-  .payment-section {
-    width: 300px;
+    max-width: 600px;
+    margin: none;
   }
 
   button {
     width: 100%;
+  }
+
+  .payment-selection {
+    gap: 20px;
+  }
+
+  form input {
+    width: 300px;
   }
 }
