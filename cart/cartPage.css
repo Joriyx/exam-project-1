@@ -98,7 +98,7 @@ article h2 {
   text-align: center;
 }
 
-.summary button {
+.checkout-button {
   background-color: var(--buttons-color);
   font-weight: bold;
   border-radius: 10px;
@@ -140,7 +140,7 @@ h1 {
     padding: 50px;
   }
 
-  .summary button {
+  .checkout-button {
     width: 100%;
   }
 
