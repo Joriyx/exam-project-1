@@ -1,0 +1,92 @@
+main {
+  color: var(--text-color);
+  padding: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+fieldset {
+  border: none;
+}
+
+input {
+  background-color: var(--card-background-color);
+  border: 2px solid var(--text-color);
+  border-radius: 10px;
+  height: 30px;
+  font-size: 1.2em;
+  color: var(--text-color);
+  padding: 5px;
+}
+
+label {
+  align-self: flex-start;
+}
+
+button {
+  background-color: var(--buttons-color);
+  color: var(--text-color);
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 25px;
+  width: 60%;
+  align-self: center;
+}
+
+.delivery-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.payment-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0;
+}
+
+.input-group div {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group input {
+  width: 90%;
+}
+
+input[type="radio"] + label {
+  border: 2px solid var(--text-color);
+  background-color: var(--card-background-color);
+  border-radius: 10px;
+  padding: 8px 20px;
+}
+
+input[type="radio"]:checked + label {
+  background-color: var(--buttons-color);
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.payment-selection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+}
