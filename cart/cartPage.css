@@ -25,7 +25,7 @@ article h2 {
 
 .product-thumbnail img {
   height: 90px;
-  min-width: 100%;
+  width: 100%;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -121,4 +121,30 @@ article h2 {
 
 h1 {
   padding-bottom: 20px;
+}
+
+@media (min-width: 800px) {
+  .cart-content {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    justify-content: center;
+  }
+
+  .summary {
+    background-color: var(--card-background-color);
+    border: 2px solid var(--card-border-color);
+    border-radius: 10px;
+    height: 250px;
+    width: 300px;
+    padding: 50px;
+  }
+
+  .summary button {
+    width: 100%;
+  }
+
+  h1 {
+    text-align: center;
+  }
 }
