@@ -135,6 +135,12 @@ article p {
   white-space: nowrap;
 }
 
+#electronics,
+#fashion,
+#other {
+  max-width: 300px;
+}
+
 @media (min-width: 800px) {
   .list-img {
     height: 200px;
@@ -194,5 +200,11 @@ article p {
   .list-button-right {
     height: 36px;
     width: 36px;
+  }
+
+  #electronics,
+  #fashion,
+  #other {
+    max-width: 600px;
   }
 }

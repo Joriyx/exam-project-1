@@ -19,7 +19,7 @@ export function createCarousel(product) {
   h3.textContent = product.title;
   hgroup.appendChild(h3);
   const p = document.createElement("p");
-  p.textContent = product.price + "nok";
+  p.textContent = product.price + " " + "NOK";
   hgroup.appendChild(p);
 
   const button = document.createElement("a");
