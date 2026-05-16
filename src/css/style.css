@@ -74,6 +74,7 @@ main {
   border-radius: 0 0 10px 10px;
   top: 60px;
   right: 0;
+  font-size: 1.2em;
   padding: 20px 25px;
 }
 
@@ -134,6 +135,13 @@ footer div {
 
   .logo {
     height: 48px;
+  }
+
+  .dropdown {
+    top: 90px;
+    right: 0;
+    padding: 20px 30px;
+    font-size: 1.5em;
   }
 
   main {
