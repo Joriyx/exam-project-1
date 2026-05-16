@@ -53,6 +53,34 @@ main {
   box-sizing: border-box;
 }
 
+.profile img {
+  height: 24px;
+  padding: 10px;
+}
+
+#profile-checkbox {
+  display: none;
+}
+
+#profile-checkbox:checked ~ nav {
+  display: block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background: var(--header-color);
+  font-family: var(--headings-font);
+  border-radius: 0 0 10px 10px;
+  top: 60px;
+  right: 0;
+  padding: 20px 25px;
+}
+
+.dropdown a {
+  color: var(--background-color);
+}
+
 .logo {
   padding-top: 10px;
   height: 36px;
