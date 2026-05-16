@@ -137,12 +137,12 @@ h1 {
     background-color: var(--card-background-color);
     border: 2px solid var(--card-border-color);
     border-radius: 10px;
-    height: 250px;
+    height: 100px;
     width: 300px;
-    padding: 50px;
+    padding: 40px;
   }
 
-  .button {
+  .summary .button {
     width: 100%;
   }
 
