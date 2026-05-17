@@ -146,6 +146,7 @@ article p {
   grid-template-rows: repeat(auto);
   grid-template-columns: 125px 125px;
   margin: 0 auto;
+  justify-content: center;
   gap: 20px;
 }
 
