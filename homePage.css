@@ -127,6 +127,11 @@ article p {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  transition: scale 100ms;
+}
+
+.card:hover {
+  scale: 1.02;
 }
 
 .card hgroup {
