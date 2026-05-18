@@ -22,6 +22,18 @@ export function createProductDetails(product) {
   const shareButtonImage = document.createElement("img");
   shareButtonImage.src = "/assets/icons/share-icons.svg";
   shareButtonImage.alt = "A curved arrow";
+  async function onShareClick() {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      shareButtonImage.src = "/assets/icons/share-filled-icons.svg";
+      setTimeout(() => {
+        shareButtonImage.src = "/assets/icons/share-icons.svg";
+      }, 250);
+    } catch (err) {}
+  }
+
+  shareButton.onclick = onShareClick;
+
   shareButton.appendChild(shareButtonImage);
 
   const productDescription = document.createElement("p");
