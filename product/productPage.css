@@ -11,6 +11,11 @@ main {
   width: 100%;
 }
 
+h1 button {
+  border: none;
+  color: var(--text-color);
+}
+
 .reviews {
   background-color: var(--buttons-color);
   border-radius: 10px;
@@ -44,6 +49,18 @@ main {
 .stars.small img {
   width: 64px;
   margin-top: 2px;
+}
+
+h1 {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+h1 button {
+  display: block;
+  height: 40px;
+  width: 40px;
 }
 
 @media (min-width: 800px) {
