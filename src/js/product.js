@@ -1,4 +1,4 @@
-function createProductDetails(product) {
+export function createProductDetails(product) {
   const productImgSection = document.createElement("section");
 
   const a = document.createElement("a");
@@ -58,10 +58,17 @@ function createProductDetails(product) {
   ratingDiv.appendChild(ratingNumber);
   const ratingSpan = document.createElement("span");
   ratingDiv.appendChild(ratingSpan);
-  const ratingImg = document.createElement("img");
-  ratingImg.src = "";
-  ratingImg.alt = "";
-  ratingSpan.appendChild(ratingImg);
+  const ratingStarsEmpty = document.createElement("img");
+  ratingStarsEmpty.src = "/assets/icons/stars-empty-icon.svg";
+  ratingStarsEmpty.alt = "empty stars ";
+  ratingSpan.appendChild(ratingStarsEmpty);
+  const ratingStars = document.createElement("img");
+  ratingStars.className = "filled-stars";
+  ratingStars.src = "/assets/icons/stars-icon.svg";
+  ratingStars.alt = "filled stars ";
+  const ratingPercent = (product.rating / 5) * 100;
+  ratingStars.style.width = ratingPercent + "%";
+  ratingSpan.appendChild(ratingStars);
 
   const review = document.createElement("h2");
   rating.textContent = "Review";
@@ -92,10 +99,17 @@ function createReviewCard(review) {
   reviewsDiv.appendChild(reviewsNumber);
   const reviewSpan = document.createElement("span");
   reviewsDiv.appendChild(reviewSpan);
-  const reviewImg = document.createElement("img");
-  reviewImg.src = "";
-  reviewImg.alt = "";
-  reviewSpan.appendChild(reviewImg);
+  const reviewStarsEmpty = document.createElement("img");
+  reviewStarsEmpty.src = "/assets/icons/stars-empty-icon.svg";
+  reviewStarsEmpty.alt = "empty stars ";
+  reviewSpan.appendChild(reviewStarsEmpty);
+  const reviewStars = document.createElement("img");
+  reviewStars.className = "filled-stars";
+  reviewStars.src = "/assets/icons/stars-icon.svg";
+  reviewStars.alt = "filled stars ";
+  const reviewPercent = (review.rating / 5) * 100;
+  reviewStars.style.width = reviewPercent + "%";
+  reviewSpan.appendChild(reviewStars);
   const reviewDescription = document.createElement("p");
   reviewDescription.textContent = review.description;
   reviewArticle.appendChild(reviewDescription);
