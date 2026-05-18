@@ -54,10 +54,22 @@ export function createProductDetails(product) {
   price.textContent = product.price;
   productDetailSection.appendChild(price);
 
+  const buttonDiv = document.createElement("div");
+  buttonDiv.className = "button-div";
+  productDetailSection.appendChild(buttonDiv);
   const button = document.createElement("button");
   button.className = "button";
   button.textContent = "ADD TO CART";
-  productDetailSection.appendChild(button);
+  buttonDiv.appendChild(button);
+
+  const favoriteButton = document.createElement("button");
+  favoriteButton.className = "favorite-button";
+  buttonDiv.appendChild(favoriteButton);
+
+  const favoriteButtonImg = document.createElement("img");
+  favoriteButtonImg.src = "/assets/icons/heart-white-icon.svg";
+  favoriteButtonImg.alt = "a heart";
+  favoriteButton.appendChild(favoriteButtonImg);
 
   const rating = document.createElement("h2");
   rating.textContent = "Rating";
