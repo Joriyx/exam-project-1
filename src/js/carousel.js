@@ -12,6 +12,7 @@ export function createCarousel(product) {
   a.appendChild(productImage);
 
   const div = document.createElement("div");
+  div.className = "carousel-info";
   article.appendChild(div);
   const hgroup = document.createElement("hgroup");
   div.appendChild(hgroup);
@@ -22,11 +23,23 @@ export function createCarousel(product) {
   p.textContent = product.price + " " + "NOK";
   hgroup.appendChild(p);
 
+  const buttonGroup = document.createElement("div");
+  buttonGroup.className = "button-group";
+  div.appendChild(buttonGroup);
+
   const button = document.createElement("a");
   button.className = "button";
   button.href = "/product/index.html?id=" + product.id;
   button.textContent = "Buy now";
-  div.appendChild(button);
+  buttonGroup.appendChild(button);
+
+  const favoriteButton = document.createElement("button");
+  favoriteButton.className = "favorite-button";
+  buttonGroup.appendChild(favoriteButton);
+  const favoriteButtonImg = document.createElement("img");
+  favoriteButtonImg.src = "/assets/icons/heart-white-icon.svg";
+  favoriteButtonImg.alt = "a heart";
+  favoriteButton.appendChild(favoriteButtonImg);
 
   return article;
 }
