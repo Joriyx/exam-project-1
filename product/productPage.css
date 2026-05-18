@@ -22,7 +22,7 @@ h1 button {
   padding: 10px 25px;
 }
 
-.Product-info {
+.product-info {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -106,7 +106,7 @@ h1 button {
     margin-bottom: 20px;
   }
 
-  .Product-info {
+  .product-info {
     margin: 0;
     width: 100%;
   }
