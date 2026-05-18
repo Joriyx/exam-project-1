@@ -86,6 +86,17 @@ h1 button {
   grid-template-rows: 15px;
 }
 
+.button-div {
+  display: flex;
+  gap: 20px;
+}
+
+.favorite-button {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
 @media (min-width: 800px) {
   main {
     display: grid;
