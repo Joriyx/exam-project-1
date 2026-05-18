@@ -21,7 +21,7 @@ export function createProductDetails(product) {
   h1.append(shareButton);
   const shareButtonImage = document.createElement("img");
   shareButtonImage.src = "/assets/icons/share-icons.svg";
-  shareButtonImage.alt = "";
+  shareButtonImage.alt = "A curved arrow";
   shareButton.appendChild(shareButtonImage);
 
   const productDescription = document.createElement("p");
@@ -34,6 +34,7 @@ export function createProductDetails(product) {
     const tag = product.tags[i];
     const span = document.createElement("span");
     span.textContent = "#" + tag + " ";
+    tags.appendChild(span);
   }
   productDetailSection.appendChild(tags);
 
@@ -71,7 +72,7 @@ export function createProductDetails(product) {
   ratingSpan.appendChild(ratingStars);
 
   const review = document.createElement("h2");
-  rating.textContent = "Review";
+  rating.textContent = "Reviews";
   productDetailSection.appendChild(review);
 
   for (let i = 0; i < product.reviews.length; i++) {
