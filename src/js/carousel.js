@@ -39,6 +39,16 @@ export function createCarousel(product) {
   const favoriteButtonImg = document.createElement("img");
   favoriteButtonImg.src = "/assets/icons/heart-white-icon.svg";
   favoriteButtonImg.alt = "a heart";
+  let isFavorite = false;
+  async function onFavoriteClick() {
+    isFavorite = !isFavorite;
+    if (isFavorite) {
+      favoriteButtonImg.src = "/assets/icons/heart-filled-icon.svg";
+    } else {
+      favoriteButtonImg.src = "/assets/icons/heart-white-icon.svg";
+    }
+  }
+  favoriteButton.onclick = onFavoriteClick;
   favoriteButton.appendChild(favoriteButtonImg);
 
   return article;
