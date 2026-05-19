@@ -1,3 +1,5 @@
+import { addToCart } from "./cart.js";
+
 export function createProductDetails(product) {
   const productImgSection = document.createElement("section");
 
@@ -60,6 +62,10 @@ export function createProductDetails(product) {
   const button = document.createElement("button");
   button.className = "button";
   button.textContent = "ADD TO CART";
+  function onAddClick() {
+    addToCart(product);
+  }
+  button.onclick = onAddClick;
   buttonDiv.appendChild(button);
 
   const favoriteButton = document.createElement("button");

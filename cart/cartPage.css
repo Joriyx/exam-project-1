@@ -15,6 +15,11 @@ article {
   margin-bottom: 20px;
 }
 
+h1 {
+  display: flex;
+  justify-content: space-between;
+}
+
 article h2 {
   font-size: 0.8em;
 }
@@ -67,7 +72,7 @@ article h2 {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 2px 4px;
+  padding: 2px 8px;
   border-radius: 15px;
   width: 60px;
 }
@@ -119,6 +124,9 @@ h1 {
 }
 
 @media (min-width: 800px) {
+  main {
+    margin: 40px auto;
+  }
   .cart-content {
     display: flex;
     flex-direction: row;
@@ -135,11 +143,7 @@ h1 {
     padding: 50px;
   }
 
-  .button {
+  .summary .button {
     width: 100%;
-  }
-
-  h1 {
-    text-align: center;
   }
 }

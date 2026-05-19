@@ -34,4 +34,16 @@ async function refreshCartList() {
   }
 }
 
-document.onreadystatechange = refreshCartList;
+function refreshCartPage() {
+  const clearButton = document.getElementById("clear-button");
+  if (clearButton) {
+    function onClearClick() {
+      clearCart();
+      refreshCartList();
+    }
+    clearButton.onclick = onClearClick;
+  }
+  refreshCartList();
+}
+
+document.onreadystatechange = refreshCartPage;

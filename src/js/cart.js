@@ -15,7 +15,7 @@ export function addToCart(product) {
     amount: 1,
     info: product,
   };
-  cart.push(product);
+  cart.push(newEntry);
   sessionStorage.setItem("cart", JSON.stringify(cart));
   refreshCartCounter();
   refreshCartTotal();
@@ -68,6 +68,15 @@ export function isProductInCart(id) {
   });
 }
 
+export function getProductCount(id) {
+  const cart = getCart();
+  const productIndex = cart.findIndex((product) => {
+    return product.id === id;
+  });
+  if (productIndex < 0) return 0;
+  return cart[productIndex].amount;
+}
+
 export function itemsInCartCount() {
   let totalCount = 0;
   const cart = getCart();
@@ -89,6 +98,7 @@ export function refreshCartTotal() {
   let total = 0;
   const cart = getCart();
   for (let i = 0; i < cart.length; i++) {
+    console.log(cart[i]);
     total += cart[i].info.price * cart[i].amount;
   }
 
