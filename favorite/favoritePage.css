@@ -137,7 +137,7 @@ h1 {
     background-color: var(--card-background-color);
     border: 2px solid var(--card-border-color);
     border-radius: 10px;
-    height: 100px;
+    height: 80px;
     width: 300px;
     padding: 40px;
   }
