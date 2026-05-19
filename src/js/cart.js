@@ -92,9 +92,15 @@ export function refreshCartTotal() {
     total += cart[i].info.price * cart[i].amount;
   }
 
-  const totalPrice = document.getElementById("total_price");
-  if (!totalPrice) {
-    return;
+  const subTotal = total + 80;
+
+  const totalPrice = document.getElementById("total-price");
+  if (totalPrice) {
+    totalPrice.textContent = subTotal.toFixed(2) + "NOK";
   }
-  totalPrice.textContent = total.toFixed(2) + "NOK";
+
+  const productsPrice = document.getElementById("products-price");
+  if (productsPrice) {
+    productsPrice.textContent = total.toFixed(2) + "NOK";
+  }
 }
