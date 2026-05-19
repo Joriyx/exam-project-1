@@ -181,7 +181,17 @@ article p {
 
 .button-group {
   display: flex;
+  align-items: center;
   gap: 20px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 15px;
+  font-size: 0.6em;
 }
 
 @media (min-width: 800px) {
