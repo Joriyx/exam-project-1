@@ -4,7 +4,6 @@ const ENDPOINT_LOGIN = `${BASE_URL}/auth/login`;
 const API_KEY = "c42eaf1b-7d14-4320-a17e-31a726f97fd2";
 
 export async function register(username, email, password) {
-  console.log("hel");
   try {
     const response = await fetch(ENDPOINT_REGISTER, {
       method: "POST",
@@ -137,6 +136,7 @@ function createLoggedInDropdown(user) {
   const logoutButton = document.createElement("button");
   logoutButton.className = "underline-animation";
   logoutButton.textContent = "Logout";
+  logoutButton.onclick = logout;
   logoutItem.appendChild(logoutButton);
 
   return dropdown;
@@ -154,7 +154,7 @@ function createLoggedOutDropdown() {
   list.appendChild(login);
   const loginLink = document.createElement("a");
   loginLink.className = "underline-animation";
-  loginLink.href = "/coming-soon/index.html";
+  loginLink.href = "/account/login.html";
   loginLink.textContent = "Log in";
   login.appendChild(loginLink);
 
@@ -163,6 +163,7 @@ function createLoggedOutDropdown() {
   const registerLink = document.createElement("a");
   registerLink.className = "underline-animation";
   registerLink.textContent = "Register";
+  registerLink.href = "/account/register.html";
   register.appendChild(registerLink);
 
   return dropdown;
