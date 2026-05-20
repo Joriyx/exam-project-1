@@ -38,4 +38,5 @@ export function createFavoriteCard(product) {
   const button = document.createElement("button");
   button.className = "button";
   button.textContent = "Add to cart";
+  article.appendChild(button);
 }
