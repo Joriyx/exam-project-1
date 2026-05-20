@@ -9,6 +9,7 @@ import {
   getCart,
 } from "../src/js/cart.js";
 import { getProducts } from "../src/js/api.js";
+import { refreshProfileHeader } from "../account/account.js";
 
 refreshCartCounter();
 refreshCartTotal();
@@ -35,6 +36,7 @@ async function refreshCartList() {
 }
 
 function refreshCartPage() {
+  refreshProfileHeader();
   const clearButton = document.getElementById("clear-button");
   if (clearButton) {
     function onClearClick() {

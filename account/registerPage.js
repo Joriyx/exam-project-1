@@ -1,6 +1,7 @@
-import { register } from "./account.js";
+import { register, refreshProfileHeader } from "./account.js";
 
 function refreshRegisterPage() {
+  refreshProfileHeader();
   const registerForm = document.getElementById("register-form");
 
   if (!registerForm) {

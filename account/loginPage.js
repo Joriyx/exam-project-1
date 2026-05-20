@@ -1,6 +1,7 @@
-import { login } from "./account.js";
+import { login, refreshProfileHeader } from "./account.js";
 
 function refreshLoginPage() {
+  refreshProfileHeader();
   const loginForm = document.getElementById("login-form");
 
   if (!loginForm) {

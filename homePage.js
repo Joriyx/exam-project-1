@@ -1,6 +1,7 @@
 import { createCarousel } from "./src/js/carousel.js";
 import { createProductCard } from "./src/js/product-card.js";
 import { getProducts } from "./src/js/api.js";
+import { refreshProfileHeader } from "./account/account.js";
 
 async function refreshCarousel(product) {
   const prev = document.getElementById("carousel-article");
@@ -11,6 +12,7 @@ async function refreshCarousel(product) {
 }
 
 async function refreshHomePage() {
+  refreshProfileHeader();
   const main = document.getElementById("home-content");
   if (!main) {
     return;
