@@ -48,6 +48,10 @@ header {
   height: 60px;
 }
 
+#user-name {
+  padding: 12px 5px;
+}
+
 main {
   min-height: calc(100vh - 60px);
   box-sizing: border-box;
