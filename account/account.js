@@ -63,3 +63,107 @@ export async function login(email, password) {
     };
   }
 }
+
+export function logout() {
+  sessionStorage.removeItem("logged-in-user");
+  sessionStorage.removeItem("cart");
+  window.location.reload();
+}
+
+export function getUser() {
+  const user = sessionStorage.getItem("logged-in-user");
+  if (!user) {
+    return null;
+  }
+
+  return JSON.parse(user);
+}
+
+export function getUsername() {
+  const user = getUser();
+  if (!user) {
+    return null;
+  }
+  return user.name;
+}
+
+export function isLoggedIn() {
+  const user = getUser();
+  if (!user) {
+    return false;
+  }
+  return true;
+}
+
+export function refreshProfileHeader() {
+  const user = getUser();
+  const dropdown = document.getElementById("dropdown");
+  const userName = document.getElementById("user-name");
+  if (!user) {
+    if (userName) {
+      userName.textContent = "";
+    }
+    if (dropdown) {
+      dropdown.replaceWith(createLoggedOutDropdown());
+    }
+    return;
+  }
+  if (userName) {
+    userName.textContent = "Hi, " + user.name;
+  }
+  if (dropdown) {
+    dropdown.replaceWith(createLoggedInDropdown(user));
+  }
+}
+
+function createLoggedInDropdown(user) {
+  const dropdown = document.createElement("nav");
+  dropdown.className = "dropdown";
+  dropdown.id = "dropdown";
+
+  const list = document.createElement("ul");
+  dropdown.appendChild(list);
+
+  const profile = document.createElement("li");
+  list.appendChild(profile);
+  const profileLink = document.createElement("a");
+  profileLink.className = "underline-animation";
+  profileLink.href = "/coming-soon/index.html";
+  profileLink.textContent = "Profile";
+  profile.appendChild(profileLink);
+
+  const logoutItem = document.createElement("li");
+  list.appendChild(logoutItem);
+  const logoutButton = document.createElement("button");
+  logoutButton.className = "underline-animation";
+  logoutButton.textContent = "Logout";
+  logoutItem.appendChild(logoutButton);
+
+  return dropdown;
+}
+
+function createLoggedOutDropdown() {
+  const dropdown = document.createElement("nav");
+  dropdown.className = "dropdown";
+  dropdown.id = "dropdown";
+
+  const list = document.createElement("ul");
+  dropdown.appendChild(list);
+
+  const login = document.createElement("li");
+  list.appendChild(login);
+  const loginLink = document.createElement("a");
+  loginLink.className = "underline-animation";
+  loginLink.href = "/coming-soon/index.html";
+  loginLink.textContent = "Log in";
+  login.appendChild(loginLink);
+
+  const register = document.createElement("li");
+  list.appendChild(register);
+  const registerLink = document.createElement("a");
+  registerLink.className = "underline-animation";
+  registerLink.textContent = "Register";
+  register.appendChild(registerLink);
+
+  return dropdown;
+}
