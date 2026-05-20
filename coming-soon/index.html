@@ -11,24 +11,45 @@
   </head>
   <header>
     <nav class="logo-header">
-      <a href="index.html"
+      <a href="/index.html"
         ><img src="/assets/Logo/Logo.svg" class="logo" alt="Chit Shop logo"
       /></a>
     </nav>
     <nav class="icons-nav">
       <ul class="icons-header">
         <li>
-          <a href="">
-            <img src="/assets/icons/Profile-icon.svg" class="icons" alt="" />
-          </a>
+          <p id="user-name"></p>
         </li>
         <li>
-          <a href="">
+          <input type="checkbox" id="profile-checkbox" />
+          <label for="profile-checkbox" class="profile">
+            <img src="/assets/icons/Profile-icon.svg" alt="" />
+          </label>
+          <nav class="dropdown" id="dropdown">
+            <ul>
+              <li>
+                <a class="underline-animation" href="/account/login.html"
+                  >Log in</a
+                >
+              </li>
+              <li>
+                <a class="underline-animation" href="/account/register.html"
+                  >Register</a
+                >
+              </li>
+              <li>
+                <a class="underline-animation" href="/index.html">Log out</a>
+              </li>
+            </ul>
+          </nav>
+        </li>
+        <li>
+          <a href="/favorite/index.html">
             <img src="/assets/icons/Heart-icon.svg" class="icons" alt="" />
           </a>
         </li>
         <li>
-          <a href="cart/index.html">
+          <a href="/cart/index.html">
             <img src="/assets/icons/cart-icon.svg" class="icons" alt="" />
           </a>
         </li>
