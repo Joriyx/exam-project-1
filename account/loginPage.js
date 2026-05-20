@@ -1,3 +1,5 @@
+import { login } from "./account.js";
+
 function refreshLoginPage() {
   const loginForm = document.getElementById("login-form");
 
@@ -10,6 +12,8 @@ function refreshLoginPage() {
     const formData = new FormData(loginForm);
     const email = formData.get("email");
     const password = formData.get("password");
+
+    login(email, password);
   }
 
   loginForm.onsubmit = onLogin;

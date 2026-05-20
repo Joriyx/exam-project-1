@@ -8,6 +8,10 @@ main {
   box-sizing: border-box;
 }
 
+#message {
+  scroll-margin-top: 200px;
+}
+
 .button {
   width: 100%;
   margin-top: 20px;
