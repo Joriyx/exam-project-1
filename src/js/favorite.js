@@ -61,7 +61,7 @@ export function refreshFavoritesTotal() {
     total += products[i].price;
   }
 
-  const totalPrice = document.getElementById("total-price");
+  const totalPrice = document.getElementById("total-price-favorite");
   if (!totalPrice) {
     return;
   }
