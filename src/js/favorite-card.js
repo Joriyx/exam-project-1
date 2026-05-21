@@ -1,3 +1,9 @@
+import {
+  addToFavorites,
+  removeFromFavorites,
+  itemsInFavoritesCount,
+} from "./favorite.js";
+
 export function createFavoriteCard(product) {
   const article = document.createElement("article");
 
@@ -25,6 +31,8 @@ export function createFavoriteCard(product) {
   const favoriteButtonImg = document.createElement("img");
   favoriteButtonImg.src = "/assets/icons/heart-filled-icon.svg";
   favoriteButtonImg.alt = "a heart";
+
+  favoriteButton.onclick = onTrashClick;
   favoriteButton.appendChild(favoriteButtonImg);
 
   const removeButton = document.createElement("button");
@@ -33,6 +41,19 @@ export function createFavoriteCard(product) {
   const removeButtonImg = document.createElement("img");
   removeButtonImg.src = "/assets/icons/Trashcan-icon.svg";
   removeButtonImg.alt = "a trashcan";
+  function onTrashClick() {
+    removeFromFavorites(product.id);
+    if (count <= 0) {
+      const noItems = document.createElement("article");
+      const noItemsH2 = document.createElement("h2");
+      noItemsH2.textContent = "No Products in wishlist";
+      noItems.appendChild(noItemsH2);
+      article.replaceWith(noItems);
+    } else {
+      article.remove();
+    }
+  }
+  removeButton.onclick = onTrashClick;
   removeButton.appendChild(removeButtonImg);
 
   const button = document.createElement("button");
