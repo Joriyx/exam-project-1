@@ -3,7 +3,7 @@ import { createProductDetails } from "../src/js/product.js";
 import { refreshProfileHeader } from "../account/account.js";
 
 async function refreshProductPage() {
-  refreshProductPage();
+  refreshProfileHeader();
   const productDetail = document.getElementById("product-details");
   if (!productDetail) {
     return;

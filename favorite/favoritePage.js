@@ -8,6 +8,7 @@ import {
 import { getFavorites } from "../src/js/favorite.js";
 
 async function refreshFavoritePage() {
+  refreshProfileHeader();
   const favoritesList = document.getElementById("favorite-list");
   if (!favoritesList) {
     return;
