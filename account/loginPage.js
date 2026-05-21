@@ -20,4 +20,8 @@ function refreshLoginPage() {
   loginForm.onsubmit = onLogin;
 }
 
-document.onreadystatechange = refreshLoginPage;
+document.onreadystatechange = function () {
+  if (document.readyState === "complete") {
+    refreshLoginPage();
+  }
+};

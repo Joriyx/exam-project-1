@@ -48,4 +48,8 @@ function refreshCartPage() {
   refreshCartList();
 }
 
-document.onreadystatechange = refreshCartPage;
+document.onreadystatechange = function () {
+  if (document.readyState === "complete") {
+    refreshCartPage();
+  }
+};

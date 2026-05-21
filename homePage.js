@@ -111,4 +111,8 @@ async function refreshHomePage() {
   fashionArrowLeft.onclick = showPrevProductFashion;
 }
 
-document.onreadystatechange = refreshHomePage;
+document.onreadystatechange = function () {
+  if (document.readyState === "complete") {
+    refreshHomePage();
+  }
+};

@@ -27,4 +27,8 @@ function refreshRegisterPage() {
   registerForm.onsubmit = onRegister;
 }
 
-document.onreadystatechange = refreshRegisterPage;
+document.onreadystatechange = function () {
+  if (document.readyState === "complete") {
+    refreshRegisterPage();
+  }
+};

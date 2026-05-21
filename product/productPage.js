@@ -29,4 +29,8 @@ async function refreshProductPage() {
   productDetail.append(...productSections);
 }
 
-document.onreadystatechange = refreshProductPage;
+document.onreadystatechange = function () {
+  if (document.readyState === "complete") {
+    refreshProductPage();
+  }
+};

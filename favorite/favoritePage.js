@@ -28,4 +28,8 @@ async function refreshFavoritePage() {
   }
 }
 
-document.onreadystatechange = refreshFavoritePage;
+document.onreadystatechange = function () {
+  if (document.readyState === "complete") {
+    refreshFavoritePage();
+  }
+};
