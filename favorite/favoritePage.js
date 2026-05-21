@@ -25,7 +25,7 @@ async function refreshFavoritePage() {
   }
 
   for (let i = 0; i < products.length; i++) {
-    favoritesList.appendChild(createCartCard(products[i].info));
+    favoritesList.appendChild(createFavoriteCard(products[i]));
   }
 }
 

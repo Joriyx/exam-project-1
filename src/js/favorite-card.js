@@ -36,13 +36,14 @@ export function createFavoriteCard(product) {
   favoriteButton.appendChild(favoriteButtonImg);
 
   const removeButton = document.createElement("button");
-  removeButton.className = "favorite";
+  removeButton.className = "remove-button";
   article.appendChild(removeButton);
   const removeButtonImg = document.createElement("img");
   removeButtonImg.src = "/assets/icons/Trashcan-icon.svg";
   removeButtonImg.alt = "a trashcan";
   function onTrashClick() {
     removeFromFavorites(product.id);
+    const count = itemsInFavoritesCount();
     if (count <= 0) {
       const noItems = document.createElement("article");
       const noItemsH2 = document.createElement("h2");
@@ -60,4 +61,6 @@ export function createFavoriteCard(product) {
   button.className = "button";
   button.textContent = "Add to cart";
   article.appendChild(button);
+
+  return article;
 }

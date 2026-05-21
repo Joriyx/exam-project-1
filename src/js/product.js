@@ -1,4 +1,9 @@
 import { addToCart } from "./cart.js";
+import {
+  addToFavorites,
+  removeFromFavorites,
+  isProductInFavorites,
+} from "./favorite.js";
 
 export function createProductDetails(product) {
   const productImgSection = document.createElement("section");
@@ -74,13 +79,20 @@ export function createProductDetails(product) {
   const favoriteButtonImg = document.createElement("img");
   favoriteButtonImg.src = "/assets/icons/heart-white-icon.svg";
   favoriteButtonImg.alt = "a heart";
-  let isFavorite = false;
+  let isFavorite = isProductInFavorites(product.id);
+  if (isFavorite) {
+    favoriteButtonImg.src = "/assets/icons/heart-filled-icon.svg";
+  } else {
+    favoriteButtonImg.src = "/assets/icons/heart-white-icon.svg";
+  }
   async function onFavoriteClick() {
     isFavorite = !isFavorite;
     if (isFavorite) {
       favoriteButtonImg.src = "/assets/icons/heart-filled-icon.svg";
+      addToFavorites(product);
     } else {
       favoriteButtonImg.src = "/assets/icons/heart-white-icon.svg";
+      removeFromFavorites(product.id);
     }
   }
 
