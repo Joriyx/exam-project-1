@@ -4,6 +4,7 @@ import {
   removeOneProduct,
   getProductCount,
   itemsInCartCount,
+  isProductInCart,
 } from "./cart.js";
 
 export function createCartCard(product) {
@@ -70,6 +71,15 @@ export function createCartCard(product) {
   function onMinusClick() {
     removeOneProduct(product.id);
     amountNumber.textContent = getProductCount(product.id);
+    if (itemsInCartCount() === 0) {
+      const noItems = document.createElement("article");
+      const noItemsH2 = document.createElement("h2");
+      noItemsH2.textContent = "No Products in cart";
+      noItems.appendChild(noItemsH2);
+      article.replaceWith(noItems);
+    } else if (!isProductInCart(product.id)) {
+      article.remove();
+    }
   }
   minusButton.onclick = onMinusClick;
   minusButton.appendChild(minusButtonImg);
