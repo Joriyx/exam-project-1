@@ -4,6 +4,8 @@ import {
   itemsInFavoritesCount,
 } from "./favorite.js";
 
+import { addToCart } from "./cart.js";
+
 export function createFavoriteCard(product) {
   const article = document.createElement("article");
 
@@ -60,7 +62,12 @@ export function createFavoriteCard(product) {
   const button = document.createElement("button");
   button.className = "button";
   button.textContent = "Add to cart";
+  function buttonOnClick() {
+    addToCart(product);
+  }
   article.appendChild(button);
+
+  button.onclick = buttonOnClick;
 
   return article;
 }
