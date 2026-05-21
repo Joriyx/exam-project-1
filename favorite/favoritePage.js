@@ -4,11 +4,13 @@ import {
   addToFavorites,
   removeFromFavorites,
   itemsInFavoritesCount,
+  refreshFavoritesTotal,
 } from "../src/js/favorite.js";
 import { getFavorites } from "../src/js/favorite.js";
 
 async function refreshFavoritePage() {
   refreshProfileHeader();
+  refreshFavoritesTotal();
   const favoritesList = document.getElementById("favorite-list");
   if (!favoritesList) {
     return;
