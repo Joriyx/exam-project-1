@@ -139,7 +139,14 @@ footer div {
   position: absolute;
   font-size: 14px;
   top: 10px;
-  right: 34px;
+  right: 38px;
+}
+
+#favorite-count {
+  position: absolute;
+  font-size: 14px;
+  top: 10px;
+  right: 75px;
 }
 
 @media (min-width: 800px) {
@@ -191,8 +198,12 @@ footer div {
   }
 
   #cart-count {
-    position: absolute;
     top: 23px;
     right: 48px;
+  }
+
+  #favorite-count {
+    top: 23px;
+    right: 86px;
   }
 }
