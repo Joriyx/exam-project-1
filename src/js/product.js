@@ -7,6 +7,7 @@ import {
 
 export function createProductDetails(product) {
   const productImgSection = document.createElement("section");
+  productImgSection.className = "product-img-section";
 
   const a = document.createElement("a");
   a.className = "product-image";
