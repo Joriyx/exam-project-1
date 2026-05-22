@@ -1,4 +1,7 @@
 import { login, refreshProfileHeader } from "./account.js";
+import { refreshCartCounter } from "../src/js/cart.js";
+
+refreshCartCounter();
 
 function refreshLoginPage() {
   refreshProfileHeader();

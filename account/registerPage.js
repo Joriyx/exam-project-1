@@ -1,4 +1,7 @@
 import { register, refreshProfileHeader } from "./account.js";
+import { refreshCartCounter } from "../src/js/cart.js";
+
+refreshCartCounter();
 
 function refreshRegisterPage() {
   refreshProfileHeader();
