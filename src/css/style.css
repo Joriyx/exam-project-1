@@ -98,6 +98,7 @@ main {
 .icons {
   height: 24px;
   padding: 10px;
+  position: relative;
 }
 
 .icons-header {
@@ -132,6 +133,13 @@ footer h3 {
 footer nav,
 footer div {
   width: 150px;
+}
+
+#cart-count {
+  position: absolute;
+  font-size: 14px;
+  top: 10px;
+  right: 28px;
 }
 
 @media (min-width: 800px) {
@@ -180,5 +188,11 @@ footer div {
   footer nav,
   footer div {
     width: unset;
+  }
+
+  #cart-count {
+    position: absolute;
+    top: 23px;
+    right: 38px;
   }
 }

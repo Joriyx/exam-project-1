@@ -7,7 +7,9 @@ import {
   refreshFavoritesTotal,
 } from "../src/js/favorite.js";
 import { getFavorites } from "../src/js/favorite.js";
-import { addToCart } from "../src/js/cart.js";
+import { addToCart, refreshCartCounter } from "../src/js/cart.js";
+
+refreshCartCounter();
 
 async function refreshFavoritePage() {
   refreshProfileHeader();

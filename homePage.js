@@ -2,6 +2,9 @@ import { createCarousel } from "./src/js/carousel.js";
 import { createProductCard } from "./src/js/product-card.js";
 import { getProducts } from "./src/js/api.js";
 import { refreshProfileHeader } from "./account/account.js";
+import { refreshCartCounter } from "./src/js/cart.js";
+
+refreshCartCounter();
 
 async function refreshCarousel(product) {
   const prev = document.getElementById("carousel-article");

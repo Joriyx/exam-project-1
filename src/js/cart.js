@@ -87,7 +87,7 @@ export function itemsInCartCount() {
 }
 
 export function refreshCartCounter() {
-  const cartCount = document.getElementById("cart_count");
+  const cartCount = document.getElementById("cart-count");
   if (!cartCount) {
     return;
   }
