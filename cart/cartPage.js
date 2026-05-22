@@ -10,9 +10,11 @@ import {
 } from "../src/js/cart.js";
 import { getProducts } from "../src/js/api.js";
 import { refreshProfileHeader } from "../account/account.js";
+import { refreshFavoritesCounter } from "../src/js/favorite.js";
 
 refreshCartCounter();
 refreshCartTotal();
+refreshFavoritesCounter();
 
 async function refreshCartList() {
   const cartList = document.getElementById("cart-list");

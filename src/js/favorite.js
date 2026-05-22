@@ -47,11 +47,11 @@ export function itemsInFavoritesCount() {
 }
 
 export function refreshFavoritesCounter() {
-  const favoritesCount = document.getElementById("favorites-counter");
+  const favoritesCount = document.getElementById("favorite-count");
   if (!favoritesCount) {
     return;
   }
-  favoritesCount.textContent = getFavorites().length;
+  favoritesCount.textContent = itemsInFavoritesCount();
 }
 
 export function refreshFavoritesTotal() {

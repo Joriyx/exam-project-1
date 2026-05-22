@@ -2,8 +2,10 @@ import { getProduct } from "../src/js/api.js";
 import { createProductDetails } from "../src/js/product.js";
 import { refreshProfileHeader } from "../account/account.js";
 import { refreshCartCounter } from "../src/js/cart.js";
+import { refreshFavoritesCounter } from "../src/js/favorite.js";
 
 refreshCartCounter();
+refreshFavoritesCounter();
 
 async function refreshProductPage() {
   refreshProfileHeader();
