@@ -1,4 +1,10 @@
+import { isLoggedIn } from "../../account/account.js";
+
 export function addToFavorites(product) {
+  if (!isLoggedIn()) {
+    window.location.assign("/account/login.html");
+    return;
+  }
   const favorites = getFavorites();
   for (let i = 0; i < favorites.length; i++) {
     const element = favorites[i];
@@ -28,6 +34,9 @@ export function clearFavorites() {
 }
 
 export function getFavorites() {
+  if (!isLoggedIn()) {
+    return [];
+  }
   const favorites = localStorage.getItem("favorites");
   if (!favorites) {
     return [];
