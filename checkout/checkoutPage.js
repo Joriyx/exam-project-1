@@ -1,6 +1,9 @@
 import { refreshProfileHeader } from "../account/account.js";
-import { refreshCartCounter, clearCart } from "../src/js/cart.js";
-import { refreshFavoritesCounter } from "../src/js/favorite.js";
+import { refreshCartCounter, clearCart, getCart } from "../src/js/cart.js";
+import {
+  refreshFavoritesCounter,
+  removeFromFavorites,
+} from "../src/js/favorite.js";
 
 refreshCartCounter();
 refreshFavoritesCounter();
@@ -12,6 +15,10 @@ async function refreshCheckoutPage() {
   if (clearButton) {
     function onClearClick(event) {
       event.preventDefault();
+      const cart = getCart();
+      for (let i = 0; i < cart.length; i++) {
+        removeFromFavorites(cart[i].id);
+      }
       clearCart();
       window.location.replace("/success/index.html");
     }
