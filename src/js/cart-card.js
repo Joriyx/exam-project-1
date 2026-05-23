@@ -10,8 +10,9 @@ import {
 export function createCartCard(product) {
   const article = document.createElement("article");
 
-  const productThumbnail = document.createElement("span");
+  const productThumbnail = document.createElement("a");
   productThumbnail.className = "product-thumbnail";
+  productThumbnail.href = "/product/index.html?id=" + product.id;
   article.appendChild(productThumbnail);
   const productThumbnailImg = document.createElement("img");
   productThumbnailImg.src = product.image.url;
