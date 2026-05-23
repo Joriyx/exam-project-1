@@ -4,3 +4,13 @@ import { refreshFavoritesCounter } from "../src/js/favorite.js";
 
 refreshCartCounter();
 refreshFavoritesCounter();
+
+async function refreshCheckoutPage() {
+  refreshProfileHeader();
+}
+
+document.onreadystatechange = function () {
+  if (document.readyState === "complete") {
+    refreshCheckoutPage();
+  }
+};
