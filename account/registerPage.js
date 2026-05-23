@@ -26,7 +26,13 @@ function refreshRegisterPage() {
       errorMessage.scrollIntoView({ behavior: "smooth" });
       return;
     }
-    register(username, email, password);
+    const result = await register(username, email, password);
+    if ("error" in result) {
+      const errorMessage = document.getElementById("message");
+      errorMessage.textContent = result.error;
+      errorMessage.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
   }
 
   registerForm.onsubmit = onRegister;

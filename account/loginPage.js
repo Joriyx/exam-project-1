@@ -19,7 +19,13 @@ function refreshLoginPage() {
     const email = formData.get("email");
     const password = formData.get("password");
 
-    login(email, password);
+    const result = await login(email, password);
+    if ("error" in result) {
+      const errorMessage = document.getElementById("message");
+      errorMessage.textContent = result.error;
+      errorMessage.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
   }
 
   loginForm.onsubmit = onLogin;

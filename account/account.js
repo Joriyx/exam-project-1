@@ -20,9 +20,10 @@ export async function register(username, email, password) {
       window.location.replace("/account/login.html");
       return;
     }
-    console.log(response);
+    return {
+      error: "Unknown error occurred",
+    };
   } catch (error) {
-    console.log(error);
     if (error instanceof Error) {
       return {
         error: error.message,
@@ -51,6 +52,9 @@ export async function login(email, password) {
       sessionStorage.setItem("logged-in-user", JSON.stringify(userData));
       window.location.replace("/index.html");
     }
+    return {
+      error: "Unknown error occurred",
+    };
   } catch (error) {
     if (error instanceof Error) {
       return {
