@@ -10,6 +10,8 @@ main {
 
 #message {
   scroll-margin-top: 200px;
+  text-wrap: balance;
+  text-align: center;
 }
 
 .button {
@@ -55,5 +57,9 @@ main a {
 @media (min-width: 800px) {
   form {
     width: 350px;
+  }
+
+  #message {
+    max-width: 450px;
   }
 }
