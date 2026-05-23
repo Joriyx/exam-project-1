@@ -89,6 +89,25 @@ input[type="radio"] {
   padding: 0;
 }
 
+#card-payment,
+#vipps-payment,
+#klarna-payment {
+  display: none;
+  padding: 0;
+}
+
+form:has(#card:checked) #card-payment {
+  display: block;
+}
+
+form:has(#vipps:checked) #vipps-payment {
+  display: block;
+}
+
+form:has(#klarna:checked) #klarna-payment {
+  display: block;
+}
+
 @media (min-width: 800px) {
   main {
     padding: 60px;
