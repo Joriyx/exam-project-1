@@ -129,6 +129,15 @@ export function createProductDetails(product) {
   rating.textContent = "Reviews";
   productDetailSection.appendChild(review);
 
+  if (product.reviews.length === 0) {
+    const noReviews = document.createElement("article");
+    noReviews.className = "reviews";
+    productDetailSection.appendChild(noReviews);
+    const text = document.createElement("h3");
+    text.textContent = "Be the first to add reviews";
+    noReviews.appendChild(text);
+  }
+
   for (let i = 0; i < product.reviews.length; i++) {
     const review = product.reviews[i];
     const card = createReviewCard(review);
