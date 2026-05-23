@@ -7,6 +7,8 @@ import {
   isProductInCart,
 } from "./cart.js";
 
+import { isProductInFavorites } from "./favorite.js";
+
 export function createCartCard(product) {
   const article = document.createElement("article");
 
@@ -33,8 +35,14 @@ export function createCartCard(product) {
   favoriteButton.className = "favorite";
   article.appendChild(favoriteButton);
   const favoriteButtonImg = document.createElement("img");
-  favoriteButtonImg.src = "/assets/icons/heart-filled-icon.svg";
-  favoriteButtonImg.alt = "a heart";
+  if (isProductInFavorites(product.id) === true) {
+    favoriteButtonImg.src = "/assets/icons/heart-filled-icon.svg";
+    favoriteButtonImg.alt = "a heart";
+  } else {
+    favoriteButtonImg.src = "/assets/icons/heart-white-icon.svg";
+    favoriteButtonImg.alt = "a heart";
+  }
+
   favoriteButton.appendChild(favoriteButtonImg);
 
   const removeButton = document.createElement("button");
