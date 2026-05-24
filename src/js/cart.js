@@ -99,7 +99,7 @@ export function refreshCartTotal() {
   const cart = getCart();
   for (let i = 0; i < cart.length; i++) {
     console.log(cart[i]);
-    total += cart[i].info.price * cart[i].amount;
+    total += cart[i].info.discountedPrice * cart[i].amount;
   }
 
   const subTotal = total + 80;

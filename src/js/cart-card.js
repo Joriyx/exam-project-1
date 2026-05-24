@@ -28,7 +28,7 @@ export function createCartCard(product) {
 
   const productPrice = document.createElement("p");
   productPrice.className = "price";
-  productPrice.textContent = product.price;
+  productPrice.textContent = product.discountedPrice + " NOK";
   article.appendChild(productPrice);
 
   const favoriteButton = document.createElement("button");

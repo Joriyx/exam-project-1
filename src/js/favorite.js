@@ -67,7 +67,7 @@ export function refreshFavoritesTotal() {
   let total = 0;
   const products = getFavorites();
   for (let i = 0; i < products.length; i++) {
-    total += products[i].price;
+    total += products[i].discountedPrice;
   }
 
   const totalPrice = document.getElementById("total-price-favorite");
