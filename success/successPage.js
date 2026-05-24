@@ -6,7 +6,7 @@ refreshCartCounter();
 refreshFavoritesCounter();
 
 async function refreshSuccessPage() {
-  refreshProfileHeader();
+  refreshProfileHeader("../");
 }
 
 document.onreadystatechange = function () {
