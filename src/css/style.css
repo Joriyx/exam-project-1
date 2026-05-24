@@ -126,8 +126,13 @@ footer nav {
   height: 64px;
 }
 
-footer h3 {
+footer h2 {
   margin: 0;
+  color: var(--background-color);
+}
+
+footer a {
+  color: var(--background-color);
 }
 
 footer nav,
