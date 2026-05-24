@@ -106,7 +106,7 @@ main {
   flex-direction: row;
 }
 
-.icons-header li {
+.icons-header a {
   position: relative;
 }
 
