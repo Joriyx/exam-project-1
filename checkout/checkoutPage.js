@@ -9,7 +9,7 @@ refreshCartCounter();
 refreshFavoritesCounter();
 
 async function refreshCheckoutPage() {
-  refreshProfileHeader();
+  refreshProfileHeader("../");
 
   const clearButton = document.getElementById("checkout-button");
   if (clearButton) {
@@ -20,7 +20,7 @@ async function refreshCheckoutPage() {
         removeFromFavorites(cart[i].id);
       }
       clearCart();
-      window.location.replace("/success/index.html");
+      window.location.assign("../success/index.html");
     }
     clearButton.onclick = onClearClick;
   }
