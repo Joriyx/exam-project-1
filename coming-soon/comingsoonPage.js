@@ -6,7 +6,7 @@ refreshCartCounter();
 refreshFavoritesCounter();
 
 async function refreshComingSoonPage() {
-  refreshProfileHeader();
+  refreshProfileHeader("../");
 }
 
 document.onreadystatechange = function () {
