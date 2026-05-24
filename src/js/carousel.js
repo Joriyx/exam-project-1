@@ -9,7 +9,7 @@ export function createCarousel(product) {
   article.id = "carousel-article";
 
   const a = document.createElement("a");
-  a.href = "/product/index.html?id=" + product.id;
+  a.href = "./product/index.html?id=" + product.id;
   article.appendChild(a);
   const productImage = document.createElement("img");
   productImage.className = "carousel-image";
@@ -35,7 +35,7 @@ export function createCarousel(product) {
 
   const button = document.createElement("a");
   button.className = "button";
-  button.href = "/product/index.html?id=" + product.id;
+  button.href = "./product/index.html?id=" + product.id;
   button.textContent = "Buy now";
   buttonGroup.appendChild(button);
 
@@ -43,21 +43,21 @@ export function createCarousel(product) {
   favoriteButton.className = "favorite-button";
   buttonGroup.appendChild(favoriteButton);
   const favoriteButtonImg = document.createElement("img");
-  favoriteButtonImg.src = "/assets/icons/heart-white-icon.svg";
+  favoriteButtonImg.src = "./assets/icons/heart-white-icon.svg";
   favoriteButtonImg.alt = "a heart";
   let isFavorite = isProductInFavorites(product.id);
   if (isFavorite) {
-    favoriteButtonImg.src = "/assets/icons/heart-filled-icon.svg";
+    favoriteButtonImg.src = "./assets/icons/heart-filled-icon.svg";
   } else {
-    favoriteButtonImg.src = "/assets/icons/heart-white-icon.svg";
+    favoriteButtonImg.src = "./assets/icons/heart-white-icon.svg";
   }
   async function onFavoriteClick() {
     isFavorite = !isFavorite;
     if (isFavorite) {
-      favoriteButtonImg.src = "/assets/icons/heart-filled-icon.svg";
+      favoriteButtonImg.src = "./assets/icons/heart-filled-icon.svg";
       addToFavorites(product);
     } else {
-      favoriteButtonImg.src = "/assets/icons/heart-white-icon.svg";
+      favoriteButtonImg.src = "./assets/icons/heart-white-icon.svg";
       removeFromFavorites(product.id);
     }
   }
