@@ -130,7 +130,7 @@ function createLoggedInDropdown(user, basePath = "/") {
   const profile = document.createElement("li");
   list.appendChild(profile);
   const profileLink = document.createElement("a");
-  profileLink.className = "underline-animation";
+  profileLink.className = "dropdown-link";
   profileLink.href = basePath + "coming-soon/index.html";
   profileLink.textContent = "Profile";
   profile.appendChild(profileLink);
@@ -138,7 +138,7 @@ function createLoggedInDropdown(user, basePath = "/") {
   const logoutItem = document.createElement("li");
   list.appendChild(logoutItem);
   const logoutButton = document.createElement("button");
-  logoutButton.className = "underline-animation";
+  logoutButton.className = "dropdown-link";
   logoutButton.textContent = "Logout";
   logoutButton.onclick = logout;
   logoutItem.appendChild(logoutButton);
@@ -157,7 +157,7 @@ function createLoggedOutDropdown(basePath = "/") {
   const login = document.createElement("li");
   list.appendChild(login);
   const loginLink = document.createElement("a");
-  loginLink.className = "underline-animation";
+  loginLink.className = "dropdown-link";
   loginLink.href = basePath + "account/login.html";
   loginLink.textContent = "Log in";
   login.appendChild(loginLink);
@@ -165,7 +165,7 @@ function createLoggedOutDropdown(basePath = "/") {
   const register = document.createElement("li");
   list.appendChild(register);
   const registerLink = document.createElement("a");
-  registerLink.className = "underline-animation";
+  registerLink.className = "dropdown-link";
   registerLink.textContent = "Register";
   registerLink.href = basePath + "account/register.html";
   register.appendChild(registerLink);
