@@ -126,7 +126,7 @@ export function createProductDetails(product) {
   ratingSpan.appendChild(ratingStars);
 
   const review = document.createElement("h2");
-  rating.textContent = "Reviews";
+  review.textContent = "Reviews";
   productDetailSection.appendChild(review);
 
   if (product.reviews.length === 0) {
