@@ -34,7 +34,7 @@ export function createProductCard(product) {
     isFavorite = !isFavorite;
     if (isFavorite) {
       favoriteButtonImg.src = "./assets/icons/heart-filled-icon.svg";
-      addToFavorites(product);
+      addToFavorites(product, "./");
     } else {
       favoriteButtonImg.src = "./assets/icons/heart-white-icon.svg";
       removeFromFavorites(product.id);

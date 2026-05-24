@@ -17,7 +17,7 @@ async function refreshCarousel(product) {
 }
 
 async function refreshHomePage() {
-  refreshProfileHeader();
+  refreshProfileHeader("./");
   const main = document.getElementById("home-content");
   if (!main) {
     return;

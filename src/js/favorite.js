@@ -1,8 +1,8 @@
 import { isLoggedIn } from "../../account/account.js";
 
-export function addToFavorites(product) {
+export function addToFavorites(product, basePath = "/") {
   if (!isLoggedIn()) {
-    window.location.assign("/account/login.html");
+    window.location.assign(basePath + "account/login.html");
     return;
   }
   const favorites = getFavorites();

@@ -98,7 +98,7 @@ export function isLoggedIn() {
   return true;
 }
 
-export function refreshProfileHeader() {
+export function refreshProfileHeader(basePath = "/") {
   const user = getUser();
   const dropdown = document.getElementById("dropdown");
   const userName = document.getElementById("user-name");
@@ -107,7 +107,7 @@ export function refreshProfileHeader() {
       userName.textContent = "";
     }
     if (dropdown) {
-      dropdown.replaceWith(createLoggedOutDropdown());
+      dropdown.replaceWith(createLoggedOutDropdown(basePath));
     }
     return;
   }
@@ -115,11 +115,11 @@ export function refreshProfileHeader() {
     userName.textContent = "Hi, " + user.name;
   }
   if (dropdown) {
-    dropdown.replaceWith(createLoggedInDropdown(user));
+    dropdown.replaceWith(createLoggedInDropdown(user, basePath));
   }
 }
 
-function createLoggedInDropdown(user) {
+function createLoggedInDropdown(user, basePath = "/") {
   const dropdown = document.createElement("nav");
   dropdown.className = "dropdown";
   dropdown.id = "dropdown";
@@ -131,7 +131,7 @@ function createLoggedInDropdown(user) {
   list.appendChild(profile);
   const profileLink = document.createElement("a");
   profileLink.className = "underline-animation";
-  profileLink.href = "/coming-soon/index.html";
+  profileLink.href = basePath + "coming-soon/index.html";
   profileLink.textContent = "Profile";
   profile.appendChild(profileLink);
 
@@ -146,7 +146,7 @@ function createLoggedInDropdown(user) {
   return dropdown;
 }
 
-function createLoggedOutDropdown() {
+function createLoggedOutDropdown(basePath = "/") {
   const dropdown = document.createElement("nav");
   dropdown.className = "dropdown";
   dropdown.id = "dropdown";
@@ -158,7 +158,7 @@ function createLoggedOutDropdown() {
   list.appendChild(login);
   const loginLink = document.createElement("a");
   loginLink.className = "underline-animation";
-  loginLink.href = "/account/login.html";
+  loginLink.href = basePath + "account/login.html";
   loginLink.textContent = "Log in";
   login.appendChild(loginLink);
 
@@ -167,7 +167,7 @@ function createLoggedOutDropdown() {
   const registerLink = document.createElement("a");
   registerLink.className = "underline-animation";
   registerLink.textContent = "Register";
-  registerLink.href = "/account/register.html";
+  registerLink.href = basePath + "account/register.html";
   register.appendChild(registerLink);
 
   return dropdown;
