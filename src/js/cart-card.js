@@ -14,7 +14,7 @@ export function createCartCard(product) {
 
   const productThumbnail = document.createElement("a");
   productThumbnail.className = "product-thumbnail";
-  productThumbnail.href = "/product/index.html?id=" + product.id;
+  productThumbnail.href = "../product/index.html?id=" + product.id;
   article.appendChild(productThumbnail);
   const productThumbnailImg = document.createElement("img");
   productThumbnailImg.src = product.image.url;
@@ -36,10 +36,10 @@ export function createCartCard(product) {
   article.appendChild(favoriteButton);
   const favoriteButtonImg = document.createElement("img");
   if (isProductInFavorites(product.id) === true) {
-    favoriteButtonImg.src = "/assets/icons/heart-filled-icon.svg";
+    favoriteButtonImg.src = "../assets/icons/heart-filled-icon.svg";
     favoriteButtonImg.alt = "a heart";
   } else {
-    favoriteButtonImg.src = "/assets/icons/heart-white-icon.svg";
+    favoriteButtonImg.src = "../assets/icons/heart-white-icon.svg";
     favoriteButtonImg.alt = "a heart";
   }
 
@@ -49,7 +49,7 @@ export function createCartCard(product) {
   removeButton.className = "remove-button";
   article.appendChild(removeButton);
   const removeButtonImg = document.createElement("img");
-  removeButtonImg.src = "/assets/icons/Trashcan-icon.svg";
+  removeButtonImg.src = "../assets/icons/Trashcan-icon.svg";
   removeButtonImg.alt = "a trashcan";
   function onTrashClick() {
     removeFromCart(product.id);
@@ -75,7 +75,7 @@ export function createCartCard(product) {
   const minusButton = document.createElement("button");
   amount.appendChild(minusButton);
   const minusButtonImg = document.createElement("img");
-  minusButtonImg.src = "/assets/icons/minus-sign-icon.svg";
+  minusButtonImg.src = "../assets/icons/minus-sign-icon.svg";
   minusButtonImg.alt = "a minus icon";
   function onMinusClick() {
     removeOneProduct(product.id);
@@ -100,7 +100,7 @@ export function createCartCard(product) {
   const plusButton = document.createElement("button");
   amount.appendChild(plusButton);
   const plusButtonImg = document.createElement("img");
-  plusButtonImg.src = "/assets/icons/plus-sign-icon.svg";
+  plusButtonImg.src = "../assets/icons/plus-sign-icon.svg";
   plusButtonImg.alt = "a plus icon";
   function onPlusClick() {
     addToCart(product);
