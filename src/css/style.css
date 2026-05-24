@@ -156,6 +156,7 @@ footer div {
 
 .dropdown-link {
   font-family: var(--headings-font);
+  font-size: 1em;
 }
 
 @media (min-width: 800px) {
