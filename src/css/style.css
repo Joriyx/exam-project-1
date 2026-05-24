@@ -154,6 +154,10 @@ footer div {
   right: 75px;
 }
 
+.dropdown-link {
+  font-family: var(--headings-font);
+}
+
 @media (min-width: 800px) {
   header {
     height: 90px;
