@@ -17,7 +17,7 @@ export async function register(username, email, password) {
       }),
     });
     if (response.status === 201) {
-      window.location.replace("/account/login.html");
+      window.location.replace("../account/login.html");
       return;
     }
     return {
@@ -50,7 +50,7 @@ export async function login(email, password) {
     if (response.status === 200) {
       const userData = (await response.json()).data;
       sessionStorage.setItem("logged-in-user", JSON.stringify(userData));
-      window.location.replace("/index.html");
+      window.location.replace("../index.html");
     }
     return {
       error: "Unknown error occurred",

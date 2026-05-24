@@ -6,7 +6,7 @@ refreshCartCounter();
 refreshFavoritesCounter();
 
 function refreshLoginPage() {
-  refreshProfileHeader();
+  refreshProfileHeader("../");
   const loginForm = document.getElementById("login-form");
 
   if (!loginForm) {

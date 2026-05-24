@@ -6,7 +6,7 @@ refreshCartCounter();
 refreshFavoritesCounter();
 
 function refreshRegisterPage() {
-  refreshProfileHeader();
+  refreshProfileHeader("../");
   const registerForm = document.getElementById("register-form");
 
   if (!registerForm) {
