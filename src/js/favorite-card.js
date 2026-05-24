@@ -11,7 +11,7 @@ export function createFavoriteCard(product) {
 
   const productThumbnail = document.createElement("a");
   productThumbnail.className = "product-thumbnail";
-  productThumbnail.href = "/product/index.html?id=" + product.id;
+  productThumbnail.href = "../product/index.html?id=" + product.id;
   article.appendChild(productThumbnail);
   const productThumbnailImg = document.createElement("img");
   productThumbnailImg.src = product.image.url;
@@ -32,7 +32,7 @@ export function createFavoriteCard(product) {
   favoriteButton.className = "favorite";
   article.appendChild(favoriteButton);
   const favoriteButtonImg = document.createElement("img");
-  favoriteButtonImg.src = "/assets/icons/heart-filled-icon.svg";
+  favoriteButtonImg.src = "../assets/icons/heart-filled-icon.svg";
   favoriteButtonImg.alt = "a heart";
 
   favoriteButton.onclick = onTrashClick;
@@ -42,7 +42,7 @@ export function createFavoriteCard(product) {
   removeButton.className = "remove-button";
   article.appendChild(removeButton);
   const removeButtonImg = document.createElement("img");
-  removeButtonImg.src = "/assets/icons/Trashcan-icon.svg";
+  removeButtonImg.src = "../assets/icons/Trashcan-icon.svg";
   removeButtonImg.alt = "a trashcan";
   function onTrashClick() {
     removeFromFavorites(product.id);

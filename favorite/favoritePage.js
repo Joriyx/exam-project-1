@@ -14,7 +14,7 @@ refreshCartCounter();
 refreshFavoritesCounter();
 
 async function refreshFavoritePage() {
-  refreshProfileHeader();
+  refreshProfileHeader("../");
   refreshFavoritesTotal();
   const favoritesList = document.getElementById("favorite-list");
   if (favoritesList) {
