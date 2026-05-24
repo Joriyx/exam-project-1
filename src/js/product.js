@@ -59,7 +59,16 @@ export function createProductDetails(product) {
   productDetailSection.appendChild(tags);
 
   const price = document.createElement("p");
-  price.textContent = product.price;
+  price.textContent = product.price + " NOK";
+  if (product.discountedPrice < product.price) {
+    const oldPrice = document.createElement("s");
+    const newPrice = document.createElement("b");
+    price.textContent = "";
+    oldPrice.textContent = product.price + " ";
+    newPrice.textContent = product.discountedPrice + " NOK";
+    newPrice.className = "discount";
+    price.append(oldPrice, newPrice);
+  }
   productDetailSection.appendChild(price);
 
   const buttonDiv = document.createElement("div");

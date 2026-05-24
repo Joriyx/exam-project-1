@@ -99,6 +99,10 @@ h1 button {
   width: 40px;
 }
 
+.discount {
+  margin-left: 10px;
+}
+
 @media (min-width: 800px) {
   main {
     max-width: 1200px;
