@@ -38,7 +38,7 @@ async function refreshCartList() {
 }
 
 function refreshCartPage() {
-  refreshProfileHeader();
+  refreshProfileHeader("../");
   const clearButton = document.getElementById("clear-button");
   if (clearButton) {
     function onClearClick() {
