@@ -18,7 +18,7 @@ export function createCartCard(product) {
   article.appendChild(productThumbnail);
   const productThumbnailImg = document.createElement("img");
   productThumbnailImg.src = product.image.url;
-  productThumbnailImg.alt = product.image.alt;
+  productThumbnailImg.alt = product.image.alt ?? "Product";
   productThumbnail.appendChild(productThumbnailImg);
 
   const productName = document.createElement("h2");

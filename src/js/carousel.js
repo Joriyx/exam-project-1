@@ -14,7 +14,7 @@ export function createCarousel(product) {
   const productImage = document.createElement("img");
   productImage.className = "carousel-image";
   productImage.src = product.image.url;
-  productImage.alt = product.image.alt;
+  productImage.alt = product.image.alt ?? "Product";
   a.appendChild(productImage);
 
   const div = document.createElement("div");

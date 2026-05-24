@@ -15,7 +15,7 @@ export function createProductDetails(product) {
 
   const productImage = document.createElement("img");
   productImage.src = product.image.url;
-  productImage.alt = product.image.alt;
+  productImage.alt = product.image.alt ?? "Product";
   a.appendChild(productImage);
 
   const productDetailSection = document.createElement("section");

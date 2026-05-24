@@ -15,7 +15,7 @@ export function createProductCard(product) {
   const productImage = document.createElement("img");
   productImage.className = "list-img";
   productImage.src = product.image.url;
-  productImage.alt = product.image.alt;
+  productImage.alt = product.image.alt ?? "Product";
   a.appendChild(productImage);
 
   const favoriteButton = document.createElement("button");
