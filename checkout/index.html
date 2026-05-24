@@ -60,7 +60,11 @@
   </header>
   <main>
     <form method="post">
-      <section class="delivery-section">
+      <section
+        class="delivery-section"
+        role="group"
+        aria-label="Delivery information"
+      >
         <h2>Delivery</h2>
         <label for="email">Email</label>
         <input type="email" id="email" name="email" />
@@ -75,22 +79,26 @@
         <label for="city">City</label>
         <input type="text" id="city" name="city" />
       </section>
-      <section class="payment-section">
+      <section
+        class="payment-section"
+        role="group"
+        aria-label="Payment information"
+      >
         <h2>Payment</h2>
-        <fieldset class="payment-selection">
+        <div class="payment-selection" role="group" aria-label="payment method">
           <input type="radio" id="card" name="payment" value="card" checked />
           <label for="card">Card</label>
           <input type="radio" id="vipps" name="payment" value="vipps" />
           <label for="vipps">Vipps</label>
           <input type="radio" id="klarna" name="payment" value="klarna" />
           <label for="klarna">Klarna</label>
-        </fieldset>
-        <fieldset id="card-payment">
+        </div>
+        <div id="card-payment" role="group" aria-label="Card payment details">
           <label for="card-name">Name on card</label>
           <input type="text" id="card-name" name="card-name" />
           <label for="card-number">Card number</label>
           <input type="number" id="card-number" name="card-number" />
-          <fieldset class="input-group">
+          <div class="input-group">
             <div>
               <label for="exp-date">Exp date</label>
               <input type="number" id="exp-date" name="exp-date" />
@@ -99,15 +107,19 @@
               <label for="cvv">CVV</label>
               <input type="number" id="cvv" name="cvv" />
             </div>
-          </fieldset>
-        </fieldset>
-        <fieldset id="vipps-payment">
+          </div>
+        </div>
+        <div id="vipps-payment" role="group" aria-label="Vipps payment details">
           <label for="phonenumber">Phone number</label>
           <input type="number" id="phonenumber" name="phonenumber" />
-        </fieldset>
-        <fieldset id="klarna-payment">
+        </div>
+        <div
+          id="klarna-payment"
+          role="group"
+          aria-label="Klarna payment details"
+        >
           <p>You will be forwarded to Klarna for payment details</p>
-        </fieldset>
+        </div>
         <button class="button" id="checkout-button" type="submit">
           PAY NOW
         </button>
