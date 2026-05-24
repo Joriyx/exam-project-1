@@ -106,6 +106,10 @@ main {
   flex-direction: row;
 }
 
+.icons-header li {
+  position: relative;
+}
+
 footer {
   background-color: var(--footer-color);
   display: flex;
@@ -143,15 +147,15 @@ footer div {
 #cart-count {
   position: absolute;
   font-size: 14px;
-  top: 10px;
-  right: 38px;
+  top: 0px;
+  right: 0px;
 }
 
 #favorite-count {
   position: absolute;
   font-size: 14px;
-  top: 10px;
-  right: 75px;
+  top: 0px;
+  right: 0;
 }
 
 .dropdown-link {
@@ -208,12 +212,12 @@ footer div {
   }
 
   #cart-count {
-    top: 23px;
-    right: 48px;
+    top: 0;
+    right: 0;
   }
 
   #favorite-count {
-    top: 23px;
-    right: 86px;
+    top: 0;
+    right: 0;
   }
 }
