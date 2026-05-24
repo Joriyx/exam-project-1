@@ -22,7 +22,7 @@ export function createCarousel(product) {
   article.appendChild(div);
   const hgroup = document.createElement("hgroup");
   div.appendChild(hgroup);
-  const h3 = document.createElement("h3");
+  const h3 = document.createElement("h2");
   h3.textContent = product.title;
   hgroup.appendChild(h3);
   const p = document.createElement("p");
