@@ -1,53 +1,53 @@
 @font-face {
   font-family: "Carter One";
-  src: url("/assets/fonts/CarterOne-Regular.ttf") format("truetype");
+  src: url("../../assets/fonts/CarterOne-Regular.ttf") format("truetype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "SN Pro";
-  src: url("/assets/fonts/SNPro-ExtraLight.ttf") format("truetype");
+  src: url("../../assets/fonts/SNPro-ExtraLight.ttf") format("truetype");
   font-weight: 200;
 }
 
 @font-face {
   font-family: "SN Pro";
-  src: url("/assets/fonts/SNPro-Light.ttf") format("truetype");
+  src: url("../../assets/fonts/SNPro-Light.ttf") format("truetype");
   font-weight: 300;
 }
 
 @font-face {
   font-family: "SN Pro";
-  src: url("/assets/fonts/SNPro-Regular.ttf") format("truetype");
+  src: url("../../assets/fonts/SNPro-Regular.ttf") format("truetype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "SN Pro";
-  src: url("/assets/fonts/SNPro-Medium.ttf") format("truetype");
+  src: url("../../assets/fonts/SNPro-Medium.ttf") format("truetype");
   font-weight: 500;
 }
 
 @font-face {
   font-family: "SN Pro";
-  src: url("/assets/fonts/SNPro-SemiBold.ttf") format("truetype");
+  src: url("../../assets/fonts/SNPro-SemiBold.ttf") format("truetype");
   font-weight: 600;
 }
 
 @font-face {
   font-family: "SN Pro";
-  src: url("/assets/fonts/SNPro-Bold.ttf") format("truetype");
+  src: url("../../assets/fonts/SNPro-Bold.ttf") format("truetype");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "SN Pro";
-  src: url("/assets/fonts/SNPro-ExtraBold.ttf") format("truetype");
+  src: url("../../assets/fonts/SNPro-ExtraBold.ttf") format("truetype");
   font-weight: 800;
 }
 
 @font-face {
   font-family: "SN Pro";
-  src: url("/assets/fonts/SNPro-Black.ttf") format("truetype");
+  src: url("../../assets/fonts/SNPro-Black.ttf") format("truetype");
   font-weight: 900;
 }
