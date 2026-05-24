@@ -28,14 +28,14 @@ export function createProductDetails(product) {
   const shareButton = document.createElement("button");
   h1.append(shareButton);
   const shareButtonImage = document.createElement("img");
-  shareButtonImage.src = "/assets/icons/share-icons.svg";
+  shareButtonImage.src = "../assets/icons/share-icons.svg";
   shareButtonImage.alt = "A curved arrow";
   async function onShareClick() {
     try {
       await navigator.clipboard.writeText(window.location.href);
-      shareButtonImage.src = "/assets/icons/share-filled-icons.svg";
+      shareButtonImage.src = "../assets/icons/share-filled-icons.svg";
       setTimeout(() => {
-        shareButtonImage.src = "/assets/icons/share-icons.svg";
+        shareButtonImage.src = "../assets/icons/share-icons.svg";
       }, 250);
     } catch (err) {}
   }
@@ -78,21 +78,21 @@ export function createProductDetails(product) {
   favoriteButton.className = "favorite-button";
   buttonDiv.appendChild(favoriteButton);
   const favoriteButtonImg = document.createElement("img");
-  favoriteButtonImg.src = "/assets/icons/heart-white-icon.svg";
+  favoriteButtonImg.src = "../assets/icons/heart-white-icon.svg";
   favoriteButtonImg.alt = "a heart";
   let isFavorite = isProductInFavorites(product.id);
   if (isFavorite) {
-    favoriteButtonImg.src = "/assets/icons/heart-filled-icon.svg";
+    favoriteButtonImg.src = "../assets/icons/heart-filled-icon.svg";
   } else {
-    favoriteButtonImg.src = "/assets/icons/heart-white-icon.svg";
+    favoriteButtonImg.src = "../assets/icons/heart-white-icon.svg";
   }
   async function onFavoriteClick() {
     isFavorite = !isFavorite;
     if (isFavorite) {
-      favoriteButtonImg.src = "/assets/icons/heart-filled-icon.svg";
-      addToFavorites(product);
+      favoriteButtonImg.src = "../assets/icons/heart-filled-icon.svg";
+      addToFavorites(product, "../");
     } else {
-      favoriteButtonImg.src = "/assets/icons/heart-white-icon.svg";
+      favoriteButtonImg.src = "../assets/icons/heart-white-icon.svg";
       removeFromFavorites(product.id);
     }
   }
@@ -114,12 +114,12 @@ export function createProductDetails(product) {
   const ratingSpan = document.createElement("span");
   ratingDiv.appendChild(ratingSpan);
   const ratingStarsEmpty = document.createElement("img");
-  ratingStarsEmpty.src = "/assets/icons/stars-empty-icons.svg";
+  ratingStarsEmpty.src = "../assets/icons/stars-empty-icons.svg";
   ratingStarsEmpty.alt = "empty stars ";
   ratingSpan.appendChild(ratingStarsEmpty);
   const ratingStars = document.createElement("img");
   ratingStars.className = "filled-stars";
-  ratingStars.src = "/assets/icons/stars-icons.svg";
+  ratingStars.src = "../assets/icons/stars-icons.svg";
   ratingStars.alt = "filled stars ";
   const ratingPercent = (product.rating / 5) * 100;
   ratingStars.style.width = ratingPercent + "%";
@@ -164,12 +164,12 @@ function createReviewCard(review) {
   const reviewSpan = document.createElement("span");
   reviewsDiv.appendChild(reviewSpan);
   const reviewStarsEmpty = document.createElement("img");
-  reviewStarsEmpty.src = "/assets/icons/stars-empty-icons.svg";
+  reviewStarsEmpty.src = "../assets/icons/stars-empty-icons.svg";
   reviewStarsEmpty.alt = "empty stars ";
   reviewSpan.appendChild(reviewStarsEmpty);
   const reviewStars = document.createElement("img");
   reviewStars.className = "filled-stars";
-  reviewStars.src = "/assets/icons/stars-icons.svg";
+  reviewStars.src = "../assets/icons/stars-icons.svg";
   reviewStars.alt = "filled stars ";
   const reviewPercent = (review.rating / 5) * 100;
   reviewStars.style.width = reviewPercent + "%";

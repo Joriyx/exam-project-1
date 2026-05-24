@@ -8,7 +8,7 @@ refreshCartCounter();
 refreshFavoritesCounter();
 
 async function refreshProductPage() {
-  refreshProfileHeader();
+  refreshProfileHeader("../");
   const productDetail = document.getElementById("product-details");
   if (!productDetail) {
     return;
